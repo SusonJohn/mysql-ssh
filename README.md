@@ -49,3 +49,32 @@ mysqlssh.connect(
     console.log(err)
 })
 ```
+If you use password in tunnl,you can use it.
+```javascript
+const mysqlssh = require('mysql-ssh2');
+const fs = require('fs');
+
+mysqlssh.connect(
+    {
+        host: 'my-ssh-server.org',
+        user: 'me-ssh',
+        password: ''
+    },
+    {
+        host: 'my-db-host.com',
+        user: 'me-db',
+        password: 'secret',
+        database: 'my-db-name'
+    }
+)
+.then(client => {
+    client.query('SELECT * FROM `users`', function (err, results, fields) {
+        if (err) throw err
+        console.log(results);
+        mysqlssh.close()
+    })
+})
+.catch(err => {
+    console.log(err)
+})
+```
