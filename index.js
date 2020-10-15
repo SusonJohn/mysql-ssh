@@ -1,9 +1,13 @@
 #!/usr/bin/env node
 /**
  * @author David Spreekmeester <david@grrr.nl>
+ * @changeBy SusonJohn <591016130@qq.com>
+ * @changeDetail delete dbConfig.host = 'localhost' , use dbConfig.host, avoid to change
+ * to localhost,avoid to denied login to MySQL
  */
 
 const mysql     = require('mysql2')
+const fs        = require('fs')
 const Client    = require('ssh2').Client;
 
 var tunnel = module.exports = {
@@ -43,7 +47,6 @@ var tunnel = module.exports = {
                         }
 
                         // override db host, since we're operating from within the SSH tunnel
-                        dbConfig.host = 'localhost'
                         dbConfig.stream = stream
 
                         tunnel._sql = mysql.createConnection(dbConfig)

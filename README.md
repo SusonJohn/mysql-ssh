@@ -1,8 +1,10 @@
-# MySQL SSH
-
+# MySQL-SSH2
+The project forked from https://github.com/grrr-amsterdam/mysql-ssh
 Sets up a MySQL connection inside an SSH tunnel.
 This is practical when you want to reach a database which is only accessible through a webserver.
 Even if the database server is not located on the webserver itself.
+It's extend MySQL-SSH.It's different from MySQL-SSH,it uses db.config to connect,not use localhost to connect.
+It avoids denied from MySQL when we use localhost.
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/grrr-amsterdam/mysql-ssh.svg)](https://greenkeeper.io/)
 

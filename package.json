@@ -1,30 +1,31 @@
 {
-  "dependencies": {
-    "mysql2": "^1.2.0",
-    "ssh2": "^0.5.4"
-  },
-  "name": "mysql-ssh",
-  "version": "1.0.6",
-  "description": "Execute mysql commands over an ssh tunnel.",
-  "main": "mysql.js",
-  "devDependencies": {},
+  "name": "mysql-ssh2",
+  "version": "1.0.0",
+  "description": "Execute mysql commands over an ssh tunnel.And conncet to mysql use user's config not use in localhost.It's extend mysql-ssh",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/grrr-amsterdam/mysql-ssh.git"
+    "url": "git+https://github.com/SusonJohn/mysql-ssh.git"
+  },
+  "dependencies": {
+    "coffeescript": "^1.12.6",
+    "fs": "^0.0.1-security",
+    "mysql2": "^1.2.0",
+    "ssh2": "^0.5.4"
   },
   "keywords": [
     "mysql",
     "remote",
     "tunnel",
-    "ssh"
+    "ssh2"
   ],
-  "author": "David Spreekmeester <david@grrr.nl>",
+  "author": "Suson <591016130@qq.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/grrr-amsterdam/mysql-ssh/issues"
+    "url": "https://github.com/SusonJohn/mysql-ssh/issues"
   },
-  "homepage": "https://github.com/grrr-amsterdam/mysql-ssh#readme"
+  "homepage": "https://github.com/SusonJohn/mysql-ssh#readme"
 }
