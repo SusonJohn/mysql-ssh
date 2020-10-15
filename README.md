@@ -22,7 +22,7 @@ It avoids denied from MySQL when we use localhost.
 Don't forget to `.close()` the tunnel connection when you're done querying the database.
 
 ```javascript
-const mysqlssh = require('mysql-ssh');
+const mysqlssh = require('mysql-ssh2');
 const fs = require('fs');
 
 mysqlssh.connect(
